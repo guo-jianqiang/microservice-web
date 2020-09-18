@@ -1,0 +1,36 @@
+
+@keyframes fontFadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.el-font{
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(-10px);
+    animation-name: fontFadeIn;
+    animation-timing-function: ease-in;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+}
+
+/* 改变容器宽度 */
+@keyframes animate-x {
+    0%{
+        width: 0;
+    }
+}
+
+p {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid transparent;
+    animation: animate-x 3s 0s steps(13) 1 forwards;
+}
