@@ -37,7 +37,6 @@ export const mount = ({cb}) => {
 
 export const unmount = () => {
   return new Promise(resolve => {
-    // instance.des
     resolve()
   })
 }
