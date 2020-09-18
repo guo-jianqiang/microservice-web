@@ -30,10 +30,11 @@ npm run start
 ## 子服务导出方法 vue子服务为例
 
 ```javascript
+// 子服务渲染前置钩子
 export const bootstrap = props => {
   return Promise.resolve()
 }
-
+// 子服务渲染钩子
 export const mount = ({cb}) => {
   return new Promise(resolve => {
     if (typeof cb === 'function') {
@@ -47,9 +48,11 @@ export const mount = ({cb}) => {
     resolve()
   })
 }
-
-export const unmount = () => {
+// 子服务销毁钩子
+export const unmount = props => {
   return new Promise(resolve => {
+    instance.$destroy();
+  	instance = null;
     resolve()
   })
 }
