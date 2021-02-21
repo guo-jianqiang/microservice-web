@@ -30,7 +30,7 @@ const Router = (props) => {
         <Redirect to='/table' />
       </Route>
       {
-        !window.__POWERED_BY_REACT_ ? <Layout {...props}>
+        window.__POWERED_BY_REACT_ ? <Layout {...props}>
           {renderRoute()}
         </Layout> : <React.Fragment>
           {renderRoute()}

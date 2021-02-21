@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 module.exports = {
   devtool: 'inline-source-map',
   entry: {
@@ -34,7 +35,7 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        // exclude: /node_modules/,
         use: {
           loader: "babel-loader"
         }
@@ -50,6 +51,7 @@ module.exports = {
       title: 'My react app',
       template: path.resolve(__dirname, './index.html'),
     }),
+    new BundleAnalyzerPlugin(),
     new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [

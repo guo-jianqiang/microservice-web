@@ -1,5 +1,6 @@
 import React from 'react'
 import {Table} from 'antd'
+import Slide from '../../component/Slide/Slide'
 const dataSource = [
   {
     key: '1',
@@ -33,7 +34,14 @@ const columns = [
   },
 ];
 const MyTable = () => {
-  return (<Table dataSource={dataSource} columns={columns} />)
+  return (<div>
+    <Slide>
+      {/*<div><Table dataSource={dataSource} columns={columns} /></div>*/}
+      <div style={{fontSize: 30, height: 400, background: '#FFB6C1', textAlign: 'center', lineHeight: '400px'}}>1</div>
+      <div style={{fontSize: 30,height: 400, background: '#1E90FF', textAlign: 'center', lineHeight: '400px'}}>2</div>
+      <div style={{fontSize: 30,height: 400, background: '#FFA500', textAlign: 'center', lineHeight: '400px'}}>3</div>
+    </Slide>
+  </div>)
 }
 
 export default MyTable

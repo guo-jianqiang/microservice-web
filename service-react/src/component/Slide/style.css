@@ -1,0 +1,12 @@
+.slide{
+    width: 100%;
+    overflow: hidden;
+}
+.slide-wrap{
+    white-space: nowrap;
+    transform: translateX(0);
+}
+.slide-wrap-children {
+    display: inline-block;
+    width: 100%;
+}
